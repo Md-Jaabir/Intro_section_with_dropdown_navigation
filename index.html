@@ -17,7 +17,7 @@
     <div class="left">
       <div class="logo"><h2>snap</h2></div>
       <div class="left-links">
-        <a class="dropdown" href="">Features <img src="images/icon-arrow-down.svg" alt="">
+        <a class="dropdown">Features <img src="images/icon-arrow-down.svg" alt="">
           <div class="hover"></div>
           <div style="right: 0;" class="dropdown-list">
             <li><img src="images/icon-todo.svg" alt="todo"> Todo List</li>
@@ -26,7 +26,7 @@
             <li><img src="images/icon-planning.svg" alt="planning"> Planning</li>
           </div>
         </a>
-        <a style="left: 0;" class="dropdown" href="">Company <img src="images/icon-arrow-down.svg" alt="">
+        <a style="left: 0;" class="dropdown">Company <img src="images/icon-arrow-down.svg" alt="">
           <div class="hover"></div>
           <div class="dropdown-list">
             <li>History</li>
@@ -34,13 +34,46 @@
             <li>Blog</li>
           </div>
         </a>
-        <a href="">Careers</a>
-        <a href="">About</a>
+        <a>Careers</a>
+        <a>About</a>
       </div>
     </div>
     <div class="right">
-      <a href="">Login</a>
+      <a>Login</a>
       <button class="btn">Register</button>
+    </div>
+    <img src="images/icon-menu.svg" alt="menu" onclick="openMenu()" class="menu">
+    <div class="mobile-menu show">
+      <img src="images/icon-close-menu.svg" alt="close" onclick="closeMenu()" class="close">
+      <div class="left-links">
+        <div class="mobile-dropdown one">
+          <div class="header">
+            <a class="dropdown" onclick="openMobileDropdown1()">Features <img src="images/icon-arrow-down.svg" alt=""></a>
+          </div>
+          <div style="right: 0;" class="dropdown-list">
+            <li><img src="images/icon-todo.svg" alt="todo"> Todo List</li>
+            <li><img src="images/icon-calendar.svg" alt="calender"> Calender</li>
+            <li><img src="images/icon-reminders.svg" alt="reminder"> Reminders</li>
+            <li><img src="images/icon-planning.svg" alt="planning"> Planning</li>
+          </div>
+        </div>
+        <div class="mobile-dropdown two">
+          <div class="header" onclick="openMobileDropdown2()">
+            <a style="left: 0;" class="dropdown">Company <img src="images/icon-arrow-down.svg" alt=""></a>
+          </div>
+          <div class="dropdown-list">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </div>
+        </div>
+        <a>Careers</a>
+        <a>About</a>
+      </div>
+      <div class="right">
+        <a class="mobile-login">Login</a>
+        <button class="btn mobile-register">Register</button>
+      </div>
     </div>
   </nav>
   <div class="hero">
@@ -56,7 +89,8 @@
       </div>
     </div>
     <div class="right">
-      <img src="images/image-hero-desktop.png" alt="desktop-hero-image">
+      <img class="desktop" src="images/image-hero-desktop.png" alt="desktop-hero-image">
+      <img src="images/image-hero-mobile.png" alt="mobile-hero-image" class="mobile">
     </div>
   </div>
 </body>

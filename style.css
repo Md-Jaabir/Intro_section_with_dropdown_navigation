@@ -45,7 +45,11 @@ nav .left-links{
     gap: 30px;
 }
 
-.left-links a,nav .right a{
+nav .mobile-menu{
+    display: none;
+}
+
+.left-links a,nav .right a,.mobile-login{
     color: var(--Gray);
     font-size: 14px;
     text-decoration: none;
@@ -58,11 +62,19 @@ nav .left-links{
     color: var(--Black);
 }
 
+.mobile-break{
+    display: none;
+}
+
 
 nav .right{
     display: flex;
     gap: 45px;
     align-items: center;
+}
+
+.menu{
+    display: none;
 }
 
 .btn{
@@ -92,6 +104,10 @@ nav .right{
 .hero .right img{
     width: 400px;
     height: 500px;
+}
+
+.right img.mobile{
+    display: none;
 }
 
 .hero .left{
@@ -140,6 +156,7 @@ nav .right{
     position: absolute;
     bottom: 0;
     width: 100%;
+    gap: 25px;
 }
 
 .bottom-section img{
@@ -183,6 +200,7 @@ a.dropdown{
 .dropdown-list li{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .dropdown-list li img{
@@ -205,6 +223,172 @@ a.dropdown{
     }
 }
 
-@media screen and (max-width:806px) {
-    
+@media screen and (max-width:900px) {
+    .hero .right img{
+        width: 360;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .hero .left{
+        width: 53%;
+    }
+
+    .hero .left p{
+        margin-top: 25px;
+    }
+
+    .hero .left button{
+        margin-top: 25px;
+    }
+
+    .hero .right img{
+        width: 320px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .hero{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .right img.desktop{
+        display: none;
+    }
+
+    .right img.mobile{
+        display: block;
+    }
+
+    .hero .left,.hero .right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .left-links{
+        display: none;
+    }
+
+    nav .right{
+        display: none;
+    }
+
+    .hero .right img{
+        width:100%;
+        height: auto;
+    }
+
+    .hero .left{
+        padding:35px 20px;
+    }
+
+    .hero .left h1{
+        font-size: 30px;
+    }
+
+    .hero .left p,.hero .left button{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .hero .left button{
+        padding: 12px 23px;
+    }
+
+    .left .bottom-section{
+        width: 95%;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 35px;
+        overflow: auto;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .mobile-menu.show{
+        display: flex;
+    }
+
+    .mobile-menu{
+        padding-inline: 30px;
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--White);
+        top: 0;
+        right: 0;
+        z-index: 10;
+        padding-top: 80px;
+    }
+
+    .mobile-menu .left-links{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mobile-menu .right{
+        display: flex;
+        flex-direction: column;
+        margin-top: 35px;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .mobile-menu .right .mobile-register{
+        width: 100%;
+    }
+
+    .mobile-menu .close{
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+
+    .mobile-menu .dropdown-list{
+        position: relative;
+        box-shadow: none;
+    }
+
+    .dropdown .hover{
+        display: none;
+    }
+
+    .mobile-break{
+        display: block;
+    }
+
+    .mobile-dropdown .header{
+        width: 100%;
+        display: flex;
+        gap: 7px;
+    }
+
+    .mobile-dropdown .dropdown-list{
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+        margin-left: 30px;
+    }
+
+    .dropdown-list li{
+        font-size: 14px;
+        color: var(--Gray);
+    }
+
+    .dropdown-list.show{
+        display: flex;
+    }
 }
